@@ -74,8 +74,6 @@ client.on('messageCreate', (message) => {
 		"You are sooo lame",
 		"yeah...",
 		"Seriously shut up",
-		"FUCK OFF",
-		"shit my dick dad",
 		"nobody asked",
 		"*door slam*"
 	]
@@ -94,7 +92,7 @@ client.on('messageCreate', (message) => {
 
 	console.log('Received message:', message.content);
 
-	const shittyGames = [
+	const games = [
 		'stray',
 		'huniepop',
 		'league of legends',
@@ -189,16 +187,16 @@ client.on('messageCreate', (message) => {
 
 	currentMes = message.content.toLowerCase()
 
-	for (const str of shittyGames) {
+	for (const str of games) {
 		if (currentMes.includes(str.toLowerCase())) {
-		  message.reply("shitty game");
+		  message.reply("that sure is a game");
 		  break; // Exit the loop after the first match
 		}
 	  }
 	
 
 	//--------reply to specific keyword----------
-	const triggerWord = 'not a shitty game';
+	const triggerWord = 'not a bad game';
 
 	if (message.author.bot || !message.content.toLowerCase().includes(triggerWord)) {
 	  return;
